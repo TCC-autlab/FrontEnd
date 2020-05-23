@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TCC 2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -19,28 +18,27 @@
                 <a href="#">
                     <div class="photo-circular">
                         <img src="Sem Título-32.jpg" alt="Bruno Moura">
-
-                        <span class="name">Bruno Moura</span>
                     </div>
                 </a>
             </div>
             <ul class="list-group">
-                <li><a href="#"><i id="icone" class="fas fa-home"></i>
-                        <span class="title">Início</span></a></li>
-                <li><a href="#"><i id="icone" class="fas fa-user"></i>
-                        <span class="title">Perfil</span></a></li>
-                <li><a href="#"><i id="icone" class="far fa-calendar-check"></i>
-                        <span class="title">Reservar Sala</span></a></li>
+
+                <li><a href="#"><i class="fas fa-home"></i>
+                        <span>Início</span></a></li>
+                <li><a href="#"><i class="fas fa-user"></i>
+                        <span>Perfil</span></a></li>
+                <li><a href="#"><i class="far fa-calendar-check"></i>
+                        <span>Reservar Sala</span></a></li>
                 <li><a href="#" id="sair"><i class="fas fa-sign-out-alt"></i>
-                        <span class="title">Sair</span></a></l1>
+                        <span>Sair</span></a></l1>
 
             </ul>
         </nav>
-        <div id="content">
+        <div id="page">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <button type="button" id="menu" class="btn"><i class="fas fa-chevron-left"></i></button>
+                        <button type="button" id="menu" class="btn fas fa-chevron-left" onclick="mudar()"></button>
                     </div>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Buscar Sala...">
@@ -48,6 +46,7 @@
                     </form>
                 </div>
             </nav>
+
             <h2>Receita de Omelete</h2>
             <h3>Ingredientes</h3>
             <ul>
@@ -90,6 +89,7 @@
 
     </div>
 
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -99,8 +99,7 @@
             $('#menu').click(function () {
                 $('#sidebar').toggleClass('active');
             });
-        });
-
+        }); 
     </script>
 </body>
 
