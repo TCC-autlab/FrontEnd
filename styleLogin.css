@@ -1,0 +1,90 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.wrapper{
+    background: #0d0c35;
+    padding: 20px 20px;
+    box-shadow: 200px 200px 200px rgb(0, 0, 0);
+}
+
+.login{
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+    color: rgb(39, 38, 38);
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 68px 28px;
+}
+
+h1{
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+}
+
+.login p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 21px;
+}
+
+.login input[type = "text"], input[type = "password"]{
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid rgb(12, 11, 11);
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+} 
+
+.login input[type = "submit"]{
+    height: 35px;
+    color:rgb(8, 7, 7);
+    background: rgb(211, 202, 245);
+    border-radius: 20px;
+    transition: 0.2s;
+    font-size: 20px;
+    outline: none;
+    border: none;
+}
+
+.login input[type = "submit"]:hover{
+    cursor: pointer;
+    background: #483de0;
+    transition: 0.2;
+}
+
+.login a {
+    font-size: 13px;
+    color: #131111;
+    transition: 0.2s;
+}
+
+.login a:hover{
+    transition: 0.2s;
+    color: #483de0;
+}
+
+.btn{
+    position: absolute;
+    left: 430px;
+    top: 210px;
+    background: transparent;
+    outline-color: transparent;
+}
