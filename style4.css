@@ -1,5 +1,15 @@
-body{
+body, html{
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+height: 100%;width:100%;
+}
+.fl{
+    float: left;
+}
+canvas{
+    width: 600px;
+}
+.header{
+    width: 100%;
 }
 
 a, a:hover{
@@ -31,6 +41,8 @@ a, a:hover{
 /*SIDEBAR STYLE*/
 .wrapper{
     display: flex;
+    flex: auto;
+    float: left;
 }
 #sidebar ul li a#sair{
     color: tomato;
