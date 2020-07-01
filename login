@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR" dir="ltr">
+<html lang="pr-br">
 
 <head>
-    <link rel="Stylesheet" type="text/css" href="styleLogin.css">
-    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="Stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <meta charset="utf-8">
-    <title>Tela de Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 
-<body class="wrapper">
-    <div class="login">
-        <div class="usuario"></div>
-        <h1>LOGIN</h1>
-        <form>
-            <input type="text" placeholder="Matricula">
-            <input type="password" id="senha" placeholder="Senha">
-            <button type="button" class="btn fas fa-lockultima" onclick="mostrarSenha()"
-                onclick="mudarIcone()"></button>
-            <input type="submit" value="Acessar">
-            <a href="#">Esqueceu sua senha?</a>
-        </form>
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <form action="">
+                <input type="text" class="w100" placeholder="Matricula">
+                <input type="password" class="w100" id="senha" placeholder="Senha">
+                <span  class="span fas fa-lock" onclick="mostrarSenha()"></span>
+                <a href="#">Esqueceu a Senha?</a>
+                <div class="clear"></div>     
+                <input type="submit" class="btn" value="Acessar">
+            </form>
+        </div>
     </div>
     <script>
         function mostrarSenha() {
@@ -34,13 +33,6 @@
             }
         }
     </script>
-    <script>
-
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>
