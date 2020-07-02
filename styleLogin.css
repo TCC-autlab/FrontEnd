@@ -1,90 +1,137 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+html, body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
 }
 
 .wrapper{
-    background: #0d0c35;
-    padding: 20px 20px;
-    box-shadow: 200px 200px 200px rgb(0, 0, 0);
+    background: linear-gradient(#1a125f, #4237aa);
+    height: 100%;
+    padding: 70px 0;
 }
 
-.login{
-    width: 500px;
-    height: 600px;
+.form{
+    width: 400px;
+    margin: 0 auto;
+    height: 450px;
     border-radius: 10px;
-    color: rgb(39, 38, 38);
+    padding: 30px 0;
     background-color: white;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    padding: 68px 28px;
-}
-
-h1{
-    margin: 0;
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 20px;
-    letter-spacing: 3px;
-    text-align: center;
-    color: black;
-    font-size: 25px;
-}
-
-.login p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-}
-
-.login input {
-    width: 100%;
-    margin-bottom: 21px;
-}
-
-.login input[type = "text"], input[type = "password"]{
-    border: none;
-    background: transparent;
-    outline: none;
-    border-bottom: 1px solid rgb(12, 11, 11);
-    height: 40px;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-} 
-
-.login input[type = "submit"]{
-    height: 35px;
-    color:rgb(8, 7, 7);
-    background: rgb(211, 202, 245);
-    border-radius: 20px;
-    transition: 0.2s;
-    font-size: 20px;
-    outline: none;
-    border: none;
-}
-
-.login input[type = "submit"]:hover{
-    cursor: pointer;
-    background: #483de0;
-    transition: 0.2;
-}
-
-.login a {
-    font-size: 13px;
-    color: #131111;
-    transition: 0.2s;
-}
-
-.login a:hover{
-    transition: 0.2s;
-    color: #483de0;
+    animation-name:login;
+    animation-duration: 1s;
+    overflow: hidden;
 }
 
 .btn{
-    position: absolute;
-    left: 430px;
-    top: 210px;
-    background: transparent;
-    outline-color: transparent;
+    width: 40%;
+    height: 40px;
+    margin: 80px 120px;
+    background: linear-gradient(#1a125f, #4237aa);
+    color: white;
+    border-radius:10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    animation-name: campos;
 }
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.w100{ 
+    margin: 30px 40px;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    animation-name: campos;
+}
+
+.w100:nth-of-type(1){
+    animation-delay: .2s;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+}
+
+.w100:nth-of-type(2){
+    animation-delay: .4s;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+}
+
+.span{
+    position: relative;
+    top: -57px;
+    right: 50px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: right;
+    background: linear-gradient(#1a125f, #4237aa);
+}
+
+.btn{
+    animation-delay: .6s;
+    animation-duration: .9s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes login{
+    from{
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes campos{
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+input[type=text], input[type=password]{
+    padding: 0 10px;
+    height: 40px;
+}
+
+.form a{
+    position: relative;
+    right: 30px;
+    top: -20px;
+    float: right;
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:510px){
+    .form{
+        width: 100%;
+        height: auto;
+        padding: 15px 10px;
+    }
+    .wrapper{
+        padding: 70px 20px;
+    }
+}
+
