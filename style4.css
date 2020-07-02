@@ -1,166 +1,139 @@
-body,
-html {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html{
     height: 100%;
-    width: 100%;
 }
 
-.fl {
-    float: left;
+.grid{
+    height: 100%;
+    display: grid;
 }
 
-canvas {
-    width: 600px;
+.areas{
+    grid: 
+        "nav nav" 130px
+        "content content " 1fr
+        /260px 1fr
+    ;
 }
 
-.header {
-    width: 100%;
-}
-
-a,
-a:hover {
-    color: inherit;
+.sala {
+    font-size: 1em;
+    color: white;
     text-decoration: none;
-    transition: all 0.3s;
-}
-
-.navbar {
-    padding: 10px 10px;
-    background: #fff;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #fff;
-    margin: 40px 0;
-}
-
-#menu {
-    margin-left: 10px;
-    background: rgb(255, 255, 255);
-    color: #0d0c35;
+    padding: 10px 25px;
+    margin: 5px;
+    background-color: royalblue;
 }
 
 
-/*SIDEBAR STYLE*/
+/* Nav */
 
-.wrapper {
+.nav{
+    grid-area: nav;
+    background: linear-gradient(135deg, #1a125f, #3c319e);
+    display: grid;
+    padding: 0 5%;
+    grid-template-columns: 1fr auto;
+    height: 100px;
+    align-items: center;
+    color: white;
+}
+
+.nav ul{
     display: flex;
-    flex: auto;
-    float: left;
-    /* height: 100%; */
+    list-style: none;
 }
 
-#sidebar ul li a#sair {
-    color: tomato;
+.nav.salas{
+    display: none;
 }
 
-
-/* #sidebar, precisa corrigir bug na transição, a imagem está bugando a transição */
-
-#sidebar {
-    width: 300px;
-    background: #0d0c35;
-    color: #fff;
-    transition: 0s;
-}
-
-#sidebar.active {
-    width: 100%;
-}
-
-.sidebar-head {
-    margin-bottom: 30px;
-    padding: 30px;
-    text-align: left;
-    font-size: 40px;
-}
-
-.photo-circular img {
-    width: 50px;
-    border-radius: 50%;
-}
-
-.name {
+.nav ul li a{
+    padding: 10px 20px;
+    margin: 0 5px;
     border-radius: 5px;
-    font-size: 15px;
-    background: white;
-    color: rgb(49, 48, 48);
-    padding: 10px 10px 10px 10px;
-    text-align: center;
-    margin-left: -22px;
-    display: inline;
-}
-
-#sidebar ul li a {
-    text-align: left;
-}
-
-#sidebar.active ul li a {
-    padding: 20px 10px;
-    text-align: center;
-    font-size: 0.85em;
-}
-
-#sidebar.active .sidebar-head span {
-    display: none;
-}
-
-#sidebar.active .sidebar-head .photo-circular {
-    display: none;
-}
-
-#sidebar.active ul li a span {
-    display: none;
-}
-
-#sidebar.active ul li a {
-    padding: 10px;
-    font-size: 20px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    color: white;
+    transition: .4s;
     display: block;
+    transition: 0.3s;
 }
 
-#sidebar ul li a:hover {
-    color: #75ad0a;
-}
+.nav ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.4);
 
-#sidebar ul li a i {
-    margin-right: 10px;
-}
-
-#sidebar ul li.active {
-    color: #fff;
 }
 
 
-/*PAGE STYLE*/
+/* Content */
 
-#page {
-    padding: 20px;
-    min-height: 100vh;
+.content{
+    grid-area:content;
 }
 
+/* Modal */
 
-/*MEDIAQUERIES*/
+.pop-up{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
-@media (min-width: 400px) {
-    #sidebar {
-        margin-left: 0;
+.pop-up.mostrar{
+    display: flex;
+    z-index: 2000;
+}
+
+.sala{
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    animation: modal .5s;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 50px;
+}
+/*
+#fechar{
+    background-color: rgb(15, 52, 163);
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+*/
+
+
+@keyframes modal{
+    from{
+        transform: scale(.1);
     }
-    #page {
-        min-width: 0;
-        width: 100%;
-    }
-    #sidebar.toggled {
-        margin-left: -15rem;
+    to{
+        transform: scale(1);
     }
 }
+
+
+@media screen and (max-width:768px){
+    
+}    
