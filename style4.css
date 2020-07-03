@@ -103,9 +103,8 @@ body, html{
     height: 70%;
     border-radius: 10px;
     animation: modal .5s;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 50px;
+    overflow-y: auto;
 }
 /*
 #fechar{
@@ -122,6 +121,27 @@ body, html{
     cursor: pointer;
 }
 */
+
+.sala ul{
+    display: grid;
+    grid-template-columns: repeat(8 , 1fr);
+    margin: 10px;
+    overflow: auto;
+    list-style: none;
+}
+
+.sala ul li{
+    margin: 10px;
+    min-width: 63px;
+}
+
+.sala ul li a{
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-color: rgb(88, 88, 88);
+}
 
 
 @keyframes modal{
