@@ -26,9 +26,8 @@ body, html{
     font-size: 1em;
     color: white;
     text-decoration: none;
-    padding: 10px 25px;
     margin: 5px;
-    background-color: royalblue;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -95,7 +94,7 @@ body, html{
     z-index: 2000;
 }
 
-.sala{
+.salas{
     position: relative;
     background-color: white;
     border: 1px solid black;
@@ -105,6 +104,8 @@ body, html{
     animation: modal .5s;
     grid-template-rows: 50px;
     overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }
 /*
 #fechar{
@@ -122,20 +123,16 @@ body, html{
 }
 */
 
-.sala ul{
-    display: grid;
-    grid-template-columns: repeat(8 , 1fr);
+.salas ul{
     margin: 10px;
-    overflow: auto;
     list-style: none;
 }
 
-.sala ul li{
-    margin: 10px;
-    min-width: 63px;
+.salas ul li{
+    margin: 40px 10px;
 }
 
-.sala ul li a{
+.salas ul li a{
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -153,7 +150,20 @@ body, html{
     }
 }
 
+@media screen and (max-width:1024px){
+    .salas{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin: 5px;
+        list-style: none;
+    }
+}  
 
 @media screen and (max-width:768px){
-    
+    .salas{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 5px;
+        list-style: none;
+    }
 }    
